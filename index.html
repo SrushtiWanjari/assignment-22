@@ -6,17 +6,14 @@
     <title>Document</title>
 </head>
 <style>
-    body{
-        background-color: #B9B28A;
-    }
     .main-container{
         width: 270px;
         border: none;
         margin: 50px auto;
         border-radius: 20px;
         padding: 20px;
-        background-color: #504B38;
-        box-shadow:2px 2px 35px #504B38 ;
+        background-color: #B9B28A;
+        box-shadow:2px 2px 10px #504B38 ;
     }
     .default-img{
         height: 240px;
@@ -46,9 +43,21 @@
 </style>
 <body>
     <div class="main-container" >
-    <img src="filled-bottle.png"  class="default-img"/><br>
-    <button type="button" class="btn btn-1">Fill</button>
-    <button type="button" class="btn btn-2">Empty</button>
+    <img src="filled-bottle.png"  class="default-img" id="bulb-img"/><br>
+    <button type="button" class="btn btn-1" id="fill-btn" onclick="fillBottle()">Fill</button>
+    <button type="button" class="btn btn-2" id="empty-btn" onclick="emptyBottle()">Empty</button>
 </div>
+<script>
+   const bottleElement = document.getElementById('bulb-img');
+
+   function fillBottle(){
+bottleElement.src = "filled-bottle.png";
+   }
+
+   function emptyBottle(){
+    bottleElement.src = "empty-bottle.png";
+
+   }
+</script>
 </body>
 </html>
